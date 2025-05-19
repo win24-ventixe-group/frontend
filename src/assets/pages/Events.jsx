@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import EventCard from "../assets/components/EventCard";
+import EventCard from "../components/EventCard";
 
 const Events = () => {
     const [events, setEvents] = useState([])

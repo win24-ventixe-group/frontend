@@ -1,9 +1,9 @@
 import {Route, Routes} from 'react-router-dom';
 import './App.css';
-import Events from "./pages/Events.jsx";
-import Bookings from "./pages/Bookings.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
-import EventDetails from "./pages/EventDetails.jsx";
+import Events from "./assets/pages/Events.jsx";
+import Bookings from "./assets/pages/Bookings.jsx";
+import Dashboard from "./assets/pages/Dashboard.jsx";
+import EventDetails from "./assets/pages/EventDetails.jsx";
 
 function App() {
   return (
