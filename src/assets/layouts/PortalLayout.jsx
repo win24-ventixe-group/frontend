@@ -1,8 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
-const CenterLayout = () => {
+const PortalLayout = () => {
   return (
     <div className='portal-wrapper'>
       <Nav />
@@ -15,4 +17,4 @@ const CenterLayout = () => {
   )
 }
 
-export default CenterLayout
+export default PortalLayout

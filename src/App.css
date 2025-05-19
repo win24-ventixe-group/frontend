@@ -159,7 +159,7 @@ html, body {
 
 nav {
   grid-area: nav;
-  background-color: var (--nav-background-color);
+  background-color: var(--nav-background-color);
   border-radius: 1rem;
   padding: 1.5rem;
 }
