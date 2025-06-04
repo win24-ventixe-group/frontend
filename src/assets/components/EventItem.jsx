@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 
 const EventItem = ({event}) => {
     return (
-       <Link to={`/events/${event.id}`}>
-            <div className="event-card">
-                <div>{event.title}</div>
-            </div>
-       </Link>
+        <h2>
+            <Link to={`/events/${event.id}`}>
+                {event.title}
+            </Link>
+        </h2>
+       
     )
 }
 

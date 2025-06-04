@@ -1,6 +1,6 @@
 const Dashboard = () => {
     return (
-        <div>Events</div>
+        <div>Events!!!</div>
     )
 }
 

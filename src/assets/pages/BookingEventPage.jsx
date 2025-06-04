@@ -13,6 +13,7 @@ const BookingEventPage = () => {
     streetName: "",
     postalCode: "",
     city: "",
+    ticketQuantity : 1
   });
 
   useEffect(() => {
@@ -43,8 +44,9 @@ const BookingEventPage = () => {
     e.preventDefault();
 
     try {
+    
       const res = await fetch(
-        `https://bookinservice-ezgpaxahheehd3b0.swedencentral-01.azurewebsites.net/api/bookings`,
+        `https://bookingserviceventixe24-g7fqecbrcgfpftdv.swedencentral-01.azurewebsites.net/api/booking`,
         {
           method: "POST",
           headers: {
@@ -53,11 +55,12 @@ const BookingEventPage = () => {
           body: JSON.stringify(formData),
         }
       );
+      
 
       if (!res.ok) {
-        console.error("Booking failed");
+        console.log("Booking failed");
       } else {
-        console.error("Booking successfull");
+        console.log("Booking successfull");
         navigate("/");
       }
     } catch (err) {

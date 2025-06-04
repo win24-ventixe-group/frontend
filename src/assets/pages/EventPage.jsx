@@ -4,19 +4,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const EventPage = () => {
-   
-    
-    return (
-        <div className="portal-wrapper">
-            <Nav />
-            <Header />
-            <main>
-                <EventList />
-            </main>
-            <Footer />
-            
-        </div>
-    )
-}
+  return (
+    <div>
+      <EventList />
+      <p>address</p>
+      <p>datetime</p>
+      
+    </div>
+  );
+};
 
 export default EventPage;

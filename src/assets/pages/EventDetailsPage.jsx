@@ -22,7 +22,7 @@ const EventDetailsPage = () => {
     
     return (
         <div className="event-details">
-            <h1>{event.title}</h1>
+            <h2>{event.title}</h2>
             <Link to={`/events/booking/${id}`}>Book Event</Link>
         </div>
     )

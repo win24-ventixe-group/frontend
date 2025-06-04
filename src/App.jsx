@@ -13,7 +13,7 @@ function App() {
   return (
     <Routes>
       <Route element={<CenterLayout />}>
-        {/* Routes like login, register etc can go here */}
+        {/* Routes like login, register etc can go here */}  
       </Route>
       <Route element= {<PortalLayout />}>
         {/* <Route path="/" element={<Dashboard />} /> */}
