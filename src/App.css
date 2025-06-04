@@ -164,11 +164,29 @@ nav {
   padding: 1.5rem;
 }
 
+nav.nav-center {
+  text-align: center;
+}
+
+nav .events-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 2rem;
+
+}
+
 header {
   grid-area: header;
   background-color: var(--header-background-color);
   border-radius: 1rem;
   padding: 1.5rem;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight:500
 }
 
 main {
@@ -184,3 +202,25 @@ footer {
   border-radius: 1rem;
   padding: 1.5rem;
 }
+
+.logo-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container span {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.event-details h2 {
+  font-weight: 500;
+}
+
+
