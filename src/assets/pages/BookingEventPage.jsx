@@ -69,11 +69,11 @@ const BookingEventPage = () => {
   };
 
   return (
-    <div>
-      <h1>Book Event - {event.title}</h1>
-      <div>
-        <form onSubmit={handleSubmit} noValidate>
-          <div>
+    <div className="booking-card">
+      <h2 className="booking-title">Book Event - {event.title}</h2>
+    
+        <form className="booking-form" onSubmit={handleSubmit} noValidate>
+          <div className="form-group">
             <label>First Name</label>
             <input
               type="text"
@@ -83,7 +83,7 @@ const BookingEventPage = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>Last Name</label>
             <input
               type="text"
@@ -93,7 +93,7 @@ const BookingEventPage = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>Email</label>
             <input
               type="email"
@@ -103,7 +103,7 @@ const BookingEventPage = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>Street Name</label>
             <input
               type="text"
@@ -113,7 +113,7 @@ const BookingEventPage = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>Postal Code</label>
             <input
               type="text"
@@ -123,7 +123,7 @@ const BookingEventPage = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>City</label>
             <input
               type="text"
@@ -133,10 +133,10 @@ const BookingEventPage = () => {
               required
             />
           </div>
-          <button type="submit">Book Now</button>
+          <button className="booking-button" type="submit">Book Now</button>
         </form>
       </div>
-    </div>
+    
   );
 };
 

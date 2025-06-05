@@ -8,7 +8,6 @@ import PortalLayout from './assets/layouts/PortalLayout.jsx';
 import BookingEventPage from './assets/pages/BookingEventPage.jsx';
 
 
-
 function App() {
   return (
     <Routes>

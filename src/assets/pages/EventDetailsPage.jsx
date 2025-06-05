@@ -1,9 +1,9 @@
 import {Link, useParams} from "react-router-dom";
 import { useState, useEffect } from "react";
+import EventDate from "../components/EventDate";
 
 const EventDetailsPage = () => {
    const {id} = useParams() 
-
    const [event, setEvent] = useState({})
     
    const getEvent = async () => {
@@ -22,9 +22,35 @@ const EventDetailsPage = () => {
     
     return (
         <div className="event-details">
-            <h2>{event.title}</h2>
-            <Link to={`/events/booking/${id}`}>Book Event</Link>
+      {event.image && (
+        <div className="event-details-image">
+          <img src={event.image} alt={event.title} />
         </div>
+      )}
+
+      <div className="event-details-content">
+        <h2>{event.title}</h2>
+
+        <div className="event-meta">
+          <p className="event-meta-date">
+            <EventDate date={event.eventDate} />
+          </p>
+          <p className="event-meta-location">{event.location}</p>
+          <p className="event-meta-price">
+            Starts from <span>${event.price}</span>
+          </p>
+        </div>
+
+        <div className="event-description">
+          <h4>About Event</h4>
+          <p>{event.description}</p>
+        </div>
+
+        <Link className="event-booking-link" to={`/events/booking/${id}`}>
+          Book Event
+        </Link>
+      </div>
+    </div>
     )
 }
 

@@ -6,10 +6,7 @@ import Footer from "../components/Footer";
 const EventPage = () => {
   return (
     <div>
-      <EventList />
-      <p>address</p>
-      <p>datetime</p>
-      
+      <EventList />  
     </div>
   );
 };
