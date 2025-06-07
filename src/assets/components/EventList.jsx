@@ -12,7 +12,10 @@ const EventList = () => {
           const response = await res.json()
 
           setEvents(response.result)
+          console.log(response.result)
       }
+
+      
   }
   
   useEffect(() => {
