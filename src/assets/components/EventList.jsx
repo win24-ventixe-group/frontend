@@ -1,35 +1,33 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import EventItem from './EventItem'
+import React from "react";
+import { useState, useEffect } from "react";
+import EventItem from "./EventItem";
 
 const EventList = () => {
-  const [events, setEvents] = useState([])
-    
+  const [events, setEvents] = useState([]);
+
   const getEvents = async (eventId) => {
-      const res = await fetch(`https://ventixe24-ezgpaxahheehd3b0.swedencentral-01.azurewebsites.net/api/Events`)
-      
-      if (res.ok) {
-          const response = await res.json()
+    const res = await fetch(
+      `https://ventixe24-ezgpaxahheehd3b0.swedencentral-01.azurewebsites.net/api/Events`
+    );
 
-          setEvents(response.result)
-          console.log(response.result)
-      }
+    if (res.ok) {
+      const response = await res.json();
 
-      
-  }
-  
+      setEvents(response.result);
+      console.log(response.result);
+    }
+  };
+
   useEffect(() => {
-      getEvents()
-  }, [])
+    getEvents();
+  }, []);
   return (
-    <section id='events'> 
-      {
-        events.map((event) => (
-            <EventItem key={event.id} event={event} />
-        ))
-      }  
+    <section id="events">
+      {events.map((event) => (
+        <EventItem key={event.id} event={event} />
+      ))}
     </section>
-  )
-}
+  );
+};
 
-export default EventList
+export default EventList;

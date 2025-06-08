@@ -1,31 +1,31 @@
-import React from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
-import Header from '../components/Header'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "../components/Header";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const PortalLayout = () => {
   const location = useLocation();
 
   const getTitle = (path) => {
     switch (true) {
-      case path === '/':
-        return 'All Events';
-      case path === '/dashboard':
-        return 'Dashboard';
-      case path.startsWith('/events/booking'):
-        return 'Book Event';
-      case path.startsWith('/events/'):
-        return 'Event Details';
+      case path === "/":
+        return "All Events";
+      case path === "/dashboard":
+        return "Dashboard";
+      case path.startsWith("/events/booking"):
+        return "Book Event";
+      case path.startsWith("/events/"):
+        return "Event Details";
       default:
-        return 'All Events';
+        return "All Events";
     }
   };
 
   const title = getTitle(location.pathname);
 
   return (
-    <div className='portal-wrapper'>
+    <div className="portal-wrapper">
       <Nav />
       <Header title={title} />
       <main>
@@ -33,7 +33,7 @@ const PortalLayout = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default PortalLayout
+export default PortalLayout;
